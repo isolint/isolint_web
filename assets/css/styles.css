@@ -1,0 +1,139 @@
+
+:root {
+  --color-bg: #f5f7fa;
+  --color-primary: #1a73e8;
+  --color-secondary: #202124;
+  --color-accent: #ff6d01;
+  --color-text: #3c4043;
+  --spacing: 1rem;
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Layout */
+header, section, footer {
+  padding: calc(var(--spacing) * 2);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing);
+}
+
+nav li {
+  font-weight: 600;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Hero */
+#hero {
+  text-align: center;
+  padding: calc(var(--spacing) * 4) 0;
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing);
+  color: var(--color-secondary);
+}
+
+#hero p {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Services */
+#services ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: calc(var(--spacing) * 2);
+  margin-top: var(--spacing);
+}
+
+#services li {
+  background-color: #fff;
+  padding: var(--spacing);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* About */
+#about p {
+  max-width: 800px;
+  margin-top: var(--spacing);
+}
+
+/* Contact Form */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  max-width: 500px;
+}
+
+#contact input,
+#contact textarea {
+  padding: var(--spacing);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+}
+
+#contact button {
+  padding: var(--spacing) calc(var(--spacing) * 2);
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: var(--color-accent);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #777;
+}
