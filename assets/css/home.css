@@ -10,3 +10,18 @@
   border-radius: var(--radius);
   background: var(--card-bg);
 }
+
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: calc(var(--spacing) * 4) 0;
+}
+#hero h2 {
+  margin-bottom: var(--spacing);
+}
+
+/* About */
+#about p {
+  margin-top: var(--spacing);
+}
