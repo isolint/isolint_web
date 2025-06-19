@@ -3,19 +3,43 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-
+#services {
+  padding: calc(var(--spacing) * 2) 0;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: var(--spacing);
+} 
 .service-item {
-  padding: 1.5rem;
-  border: 1px solid var(--border-color);
+  padding: calc(var(--spacing) * 1.5);
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius);
-  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
+.service-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-item h3 {
+  margin-bottom: var(--spacing);
+  color: var(--color-secondary);
+}
+
+
+.centeredh2 {
+  text-align: center;
+}
 
 /* Hero Section */
 #hero {
   text-align: center;
-  padding: calc(var(--spacing) * 4) 0;
+  padding: calc(var(--spacing) * 2) 0;
 }
 #hero h2 {
   margin-bottom: var(--spacing);
@@ -23,5 +47,6 @@
 
 /* About */
 #about p {
+  text-align: center;
   margin-top: var(--spacing);
 }
