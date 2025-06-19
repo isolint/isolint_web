@@ -29,8 +29,21 @@
 .service-item h3 {
   margin-bottom: var(--spacing);
   color: var(--color-secondary);
+  text-align: center;
 }
 
+/* make the UL itself an inline-block, center it, but keep its list items left-aligned */
+.service-item .service-list {
+  display: inline-block;       /* shrink‐wrap to its contents */
+  margin: 0 auto;              /* center the UL within the card */
+  padding-left: 1.2em;         /* keep bullet indentation */
+  text-align: left;            /* list items align left inside the UL */
+}
+
+/* optional: add a little breathing room between list items */
+.service-item .service-list li {
+  margin-bottom: 0.5em;
+}
 
 .centeredh2 {
   text-align: center;
